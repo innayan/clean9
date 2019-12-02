@@ -10,7 +10,7 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Cleanup9con")) {
     vcs {
-        add(DslContext.settingsRoot.id!!)
-        add(AbsoluteId("GitJavaEclipse"), "+:java_eclipse/new2_aa => .", "+:java_eclipse/bin => java_eclipse/bin", "+:java_eclipse/src => java_eclipse/src")
+        add(DslContext.settingsRoot.id!!, "+:.teamcity111")
+        add(AbsoluteId("GitJavaEclipse"), "+:java_eclipse/new2_a")
     }
 }
