@@ -11,5 +11,6 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("Cleanup9con")) {
     vcs {
         add(DslContext.settingsRoot.id!!)
+        add(AbsoluteId("GitJavaEclipse"))
     }
 }
