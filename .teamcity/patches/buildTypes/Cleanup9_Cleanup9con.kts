@@ -27,34 +27,16 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
                 preserveArtifactsDependencies = true
             }
         }
-        expect {
+        remove {
             keep {
-                id = "KEEP_RULE_130"
-                keepAtLeast = allBuilds()
-                applyToBuilds {
-                    inBranches("""
-                        +:*overrie\den
-                        +:*overrie\den
-                        +:*overrie\den
-                        +:*overrie\den
-                        +:*overrie\den
-                    """.trimIndent())
-                    inPersonalBuilds = personal()
-                    withStatus = successful()
-                }
-                dataToKeep = historyAndStatistics {
-                    preserveArtifacts = byPattern("""
-                        +:cleanup9aconfigoverriden/cleanup9aconfigooverridedn/**.*
-                        +:cleanup9aconfigoverriden/cleanup9aconfigoverriden/**.*
-                    """.trimIndent())
-                }
-                applyPerEachBranch()
+                id = "KEEP_RULE_118"
+                keepAtLeast = builds(5555)
+                dataToKeep = everything()
                 preserveArtifactsDependencies = true
             }
         }
-        update {
+        remove {
             keep {
-                disabled = true
                 id = "KEEP_RULE_130"
                 keepAtLeast = allBuilds()
                 applyToBuilds {
@@ -82,12 +64,14 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
             keep {
                 disabled = true
                 id = "KEEP_RULE_128"
+                keepAtLeast = allBuilds()
             }
         }
         add {
             keep {
                 disabled = true
                 id = "KEEP_RULE_129"
+                keepAtLeast = allBuilds()
             }
         }
     }
