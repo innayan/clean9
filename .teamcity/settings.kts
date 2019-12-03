@@ -72,7 +72,7 @@ object Cleanup9_Cleanup9con : BuildType({
             preserveArtifactsDependencies = true
         }
         keep {
-         //   id = "KEEP_RULE_118"
+           id = "KEEP_RULE_118"
             keepAtLeast = builds(5555)
             dataToKeep = everything()
             preserveArtifactsDependencies = true
