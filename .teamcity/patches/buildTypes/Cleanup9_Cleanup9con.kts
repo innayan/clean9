@@ -84,5 +84,11 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
                 id = "KEEP_RULE_128"
             }
         }
+        add {
+            keep {
+                disabled = true
+                id = "KEEP_RULE_129"
+            }
+        }
     }
 }
