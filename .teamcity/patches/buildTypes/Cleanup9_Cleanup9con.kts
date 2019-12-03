@@ -78,5 +78,11 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
                 preserveArtifactsDependencies = true
             }
         }
+        add {
+            keep {
+                disabled = true
+                id = "KEEP_RULE_128"
+            }
+        }
     }
 }
