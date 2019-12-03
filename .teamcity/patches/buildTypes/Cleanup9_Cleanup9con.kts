@@ -12,6 +12,23 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
     cleanup {
         expect {
             keep {
+                id = "KEEP_RULE_118"
+                keepAtLeast = builds(5)
+                dataToKeep = everything()
+                preserveArtifactsDependencies = true
+            }
+        }
+        update {
+            keep {
+                disabled = true
+                id = "KEEP_RULE_118"
+                keepAtLeast = builds(5)
+                dataToKeep = everything()
+                preserveArtifactsDependencies = true
+            }
+        }
+        expect {
+            keep {
                 id = "KEEP_RULE_130"
                 keepAtLeast = allBuilds()
                 applyToBuilds {
