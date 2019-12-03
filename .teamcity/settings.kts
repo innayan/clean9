@@ -96,4 +96,29 @@ object Cleanup9_Cleanup9con : BuildType({
         }
         option("disableCleanupPolicies", true)
     }
+            keep {
+       //     id = "KEEP_RULE_130"
+            keepAtLeast = allBuilds()
+            applyToBuilds {
+                inBranches("""
+                    +:*overrie\den
+                    +:*overrie\den
+                    +:*overrie\den
+                    +:*overrie\den
+                    +:*overrie\den
+                """.trimIndent())
+                inPersonalBuilds = personal()
+                withStatus = successful()
+            }
+            dataToKeep = historyAndStatistics {
+                preserveArtifacts = byPattern("""
+                    +:cleanup9aconfigoverriden/cleanup9aconfigooverridedn/**.*
+                    +:cleanup9aconfigoverriden/cleanup9aconfigoverriden/**.*
+                """.trimIndent())
+            }
+            applyPerEachBranch()
+            preserveArtifactsDependencies = true
+        }
+        option("disableCleanupPolicies", true)
+    }
 })
