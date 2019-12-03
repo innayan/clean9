@@ -35,7 +35,7 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
                 preserveArtifactsDependencies = true
             }
         }
-        remove {
+        expect {
             keep {
                 id = "KEEP_RULE_130"
                 keepAtLeast = allBuilds()
@@ -58,6 +58,12 @@ changeBuildType(RelativeId("Cleanup9_Cleanup9con")) {
                 }
                 applyPerEachBranch()
                 preserveArtifactsDependencies = true
+            }
+        }
+        update {
+            keep {
+                disabled = true
+                id = "KEEP_RULE_130"
             }
         }
         add {
